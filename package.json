@@ -38,7 +38,7 @@
     },
     "parserOptions": {
       "ecmaVersion": 2022,
-      "sourceType": "script"
+      "sourceType": "module"
     },
     "ignorePatterns": [
       "node_modules/",
@@ -130,5 +130,14 @@
     "files": [
       "test/**/*.js"
     ]
-  }
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./index.js",
+      "require": "./index.js",
+      "default": "./index.js"
+    }
+  },
+  "types": "./lib/index.d.ts"
 }
